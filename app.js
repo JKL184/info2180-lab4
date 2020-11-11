@@ -5,12 +5,14 @@ window.onload = function () {
 function Avengers(e) {
 	e.preventDefault();
 	var request = new XMLHttpRequest();
-	var url = "superheroes.php";
+	let submission = document.getElementById("hero").value;
+	var url = "superheroes.php?query=" + submission;
 	request.onreadystatechange = function () {
 		if (request.readyState == XMLHttpRequest.DONE) {
 			if (request.status == 200) {
 				var avenger = request.responseText;
-				alert(avenger);
+				var msg = document.getElementById("result");
+				msg.innerHTML = avenger;
 			} else {
 				alert("Nope");
 			}

@@ -4,17 +4,32 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>INFO2180 LAB 4</title>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="styles.css" />
 		<script src="app.js"></script>
 	</head>
 	<body>
-		<h1>Avengers Character Search</h1>
-		<form action="#" method="post">
-			<div>
-				<input type="text" />
+		<header>
+			<img src="shield.png" alt="Captain America's Shield" />
+			<h1>AVENGERS CHARACTER SEARCH</h1>
+		</header>
+		<main>
+			<div class="form-container">
+				<h3>Search by Full Name or Alias</h3>
+				<form action="#" method="post">
+					<div class="form-group">
+						<input
+							type="text"
+							id="hero"
+							placeholder="e.g. Captain America or Steve Rogers"
+						/>
+					</div>
+					<button type="submit" class="btn">Search</button>
+				</form>
 			</div>
-			<button type="submit" class="btn">Search</button>
-		</form>
-		<div id="result"></div>
+			<div class="result-body">
+				<h2>Results</h2>
+				<div id="result"></div>
+			</div>
+		</main>
 	</body>
 </html>
